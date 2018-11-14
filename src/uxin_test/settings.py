@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'xadmin',
     'crispy_forms',
     'reversion',
-    'mysite',#加载新增的app应用
+    "program",
 ]
  
 MIDDLEWARE = [
