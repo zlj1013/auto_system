@@ -26,11 +26,11 @@ xadmin.site.register(Course, CourseAdmin)
 
 class ProgramAdmin(object):
     #可以是列表[],也可以是元组()，但使用元组只有一个字段是一定要加逗号
-    list_display=['pro_name',"pro_stype","story_num"]
+    list_display=['pro_name',"primary_requirement","renew_starttime","plan_testtime","fact_testtime","plan_goline_time","fact_goline_time","tester_num","bug_num","add_time"]
     #搜索框字段搜索配置
-    search_fields=['pro_name',]
+    search_fields=['pro_name',"primary_requirement"]
     #筛选功能下拉选项字段设置
-    list_filter=['pro_name',]
+    list_filter=['pro_name',"renew_starttime"]
     #每页显示多少个
     list_per_page=20
     #图标配置
@@ -54,7 +54,7 @@ class GlobalSetting(object):
     #设置左侧菜单图标
     global_search_models=[Program]
     global_models_icon={
-        Program: "fa fa-user"
+        Program: "fa fa-cloud"
     }
 xadmin.site.register(views.CommAdminView,GlobalSetting)
 

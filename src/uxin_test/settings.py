@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'uxin_test.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'testing',
+        'NAME': 'uxin_test',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': '127.0.0.1',
