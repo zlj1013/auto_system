@@ -32,7 +32,7 @@ class ProgramAdmin(object):
     #筛选功能下拉选项字段设置
     list_filter=['pro_name',"renew_starttime"]
     #每页显示多少个
-    list_per_page=20
+    list_per_page=4
     #图标配置
     #model_icon='fa fa-user-plus'
     #显示详情

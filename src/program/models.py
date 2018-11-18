@@ -23,6 +23,8 @@ class Program(models.Model):
     项目表设计
     '''
     pro=(("1","对公金融"),("2","保险系统"),("3","养成快现"))
+    depart=(("1","个贷金融"),("2","金融保险"))
+    depart_name=models.CharField(choices=depart,max_length=50,verbose_name='部门')
     pro_name=models.CharField(choices=pro,max_length=50,verbose_name='项目名')
     primary_requirement=models.CharField(max_length=100,verbose_name='主要需求')
     special_requirement=models.CharField(max_length=200,verbose_name='具体需求')
@@ -34,7 +36,7 @@ class Program(models.Model):
     tester_num=models.IntegerField(verbose_name="测试人力",blank=True, null=True)
     bug_num=models.IntegerField(verbose_name="bug数",blank=True, null=True)
     remark=models.CharField(max_length=100,verbose_name='备注',blank=True, null=True)
-    add_time=models.DateTimeField(default=datetime.now,verbose_name='添加时间')
+    add_time=models.DateTimeField(auto_now_add=True,verbose_name='添加时间')
 
     class Meta:
         #db_name="program"

@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # 文件目录导入到搜索路径中
 sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
-sys.path.insert(0, os.path.join(BASE_DIR, 'mysite'))
+#sys.path.insert(0, os.path.join(BASE_DIR, 'mysite'))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
  
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'reversion',
     "program",
+    "user",
 ]
  
 MIDDLEWARE = [
